@@ -14,7 +14,7 @@ var serial = {};
 //       { 'vendorId': 0x239A }, // Adafruit boards
 //       { 'vendorId': 0xcafe }, // TinyUSB example
 //     ];
-    return navigator.usb.requestDevice(/*{ 'filters': filters }*/{}).then(
+    return navigator.usb.requestDevice(/*{ 'filters': filters }*/{filters:[]}).then(
       device => new serial.Port(device)
     );
   }
