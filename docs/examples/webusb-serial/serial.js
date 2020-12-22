@@ -10,11 +10,11 @@ var serial = {};
   };
 
   serial.requestPort = function() {
-    const filters = [
-      { 'vendorId': 0x239A }, // Adafruit boards
-      { 'vendorId': 0xcafe }, // TinyUSB example
-    ];
-    return navigator.usb.requestDevice({ 'filters': filters }).then(
+//     const filters = [
+//       { 'vendorId': 0x239A }, // Adafruit boards
+//       { 'vendorId': 0xcafe }, // TinyUSB example
+//     ];
+    return navigator.usb.requestDevice(/*{ 'filters': filters }*/{}).then(
       device => new serial.Port(device)
     );
   }
